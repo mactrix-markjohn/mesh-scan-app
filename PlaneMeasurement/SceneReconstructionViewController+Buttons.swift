@@ -67,8 +67,8 @@ extension SceneReconstructionViewController {
         NSLayoutConstraint.activate([
             shutterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             shutterButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            shutterButton.widthAnchor.constraint(equalToConstant: 50),
-            shutterButton.heightAnchor.constraint(equalToConstant: 50)
+            shutterButton.widthAnchor.constraint(equalToConstant: 70),
+            shutterButton.heightAnchor.constraint(equalToConstant: 70)
         ])
 
         // Add action for the button
