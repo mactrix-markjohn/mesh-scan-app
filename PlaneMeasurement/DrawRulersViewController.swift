@@ -70,7 +70,7 @@ class DrawRulersViewController: UIViewController {
         
         setupSceneView()
         showInstructionLabel()
-        showInstructionLabelRounded()
+        //showInstructionLabelRounded()
         setupQuadNode()
         setupSKScene()
         setupTableView()
@@ -84,10 +84,8 @@ class DrawRulersViewController: UIViewController {
         
         // Create and add instruction label
         instructionLabel = UILabel()
-        instructionLabel?.text = "To start measuring, \ntap and hold on the plane to place the first point. \nThen, drag to the second point and release to complete the measurement."
-        instructionLabel?.textColor = .black
-        instructionLabel?.backgroundColor = .white
-        instructionLabel?.layer.cornerRadius = 80
+        instructionLabel?.text = "Tap and Hold on the plane \nto place the first point, then \nDrag to the second point \nand release to complete the measurement."
+        instructionLabel?.textColor = .white
         instructionLabel?.numberOfLines = 0
         instructionLabel?.lineBreakMode = .byWordWrapping
         instructionLabel?.textAlignment = .center
@@ -147,7 +145,7 @@ class DrawRulersViewController: UIViewController {
             instructionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             instructionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             instructionView.widthAnchor.constraint(equalToConstant: 300),
-            instructionView.heightAnchor.constraint(equalToConstant: 130)
+            instructionView.heightAnchor.constraint(greaterThanOrEqualToConstant: 130)
         ])
 
         // Set up constraints for the label inside the custom view

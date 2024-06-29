@@ -48,15 +48,16 @@ extension SceneReconstructionViewController {
         // Create the shutter button
         let shutterButton = UIButton(type: .system)
         shutterButton.translatesAutoresizingMaskIntoConstraints = false
-        shutterButton.setTitle("", for: .normal)
-        shutterButton.backgroundColor = .systemBlue
-        shutterButton.tintColor = .white
+        //shutterButton.setTitle("", for: .normal)
+        //shutterButton.backgroundColor = .systemBlue
+        //shutterButton.tintColor = .white
         shutterButton.layer.cornerRadius = 25
         
         // Set the image for the button
             if let shutterImage = UIImage(named: "camera") {
-                shutterButton.setImage(shutterImage, for: .normal)
-                shutterButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                let orignalImage = shutterImage.withRenderingMode(.alwaysOriginal)
+                shutterButton.setImage(orignalImage, for: .normal)
+                shutterButton.imageEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
             }
 
         // Add the button to the view
